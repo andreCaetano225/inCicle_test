@@ -18,6 +18,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ✔️Styled-components
 ✔️Reat-Icons
 
+
+## Observações:
+
+Clonei o layout no Figma para agilizar com o desenvolvimento do projeto.
+Segue o Link do Figma: https://www.figma.com/file/GzZOZNFixgO2byADq7WXmR/inCicle?node-id=0%3A1
+
 ## 🚀 Como Inicar o projeto:
 
 PASSO1: Instale o NODEJS em sua máquina, se já tiver instalado não é necessário instalar novamente.
