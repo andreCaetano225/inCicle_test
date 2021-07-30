@@ -1,10 +1,10 @@
+import { Home } from "./components/Home";
 import {Global} from "./styles/global";
-import {Side} from './components/Side';
 function App() {
   return (
     <>
     <Global/>
-    <Side/>
+    <Home/>
     </>
   );
 }

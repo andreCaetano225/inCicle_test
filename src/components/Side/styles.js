@@ -36,6 +36,32 @@ export const Content = styled.div`
 
    p{
        text-align: center;
+       font-weight: 300;
+   }
+
+   section{
+
+    span{
+        margin-left: 15px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        color: #969CB3;
+        img{
+            height: 30px;
+            width: 30px;
+        }
+
+    }
+
+    div{
+        display: flex;
+        align-items: center;
+
+        .casa{
+         margin-left: 50px;
+        }
+    }
    }
 
 `;
