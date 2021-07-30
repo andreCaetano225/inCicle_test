@@ -10,6 +10,7 @@ export const Container = styled.div`
   border-radius: 25px;
 
   header{
+      margin-top: 5px;
       background: var(--fundo);
       height: 10px;
   }
@@ -32,7 +33,10 @@ export const Container = styled.div`
     }
 
     h3{
-        margin-top: 15px;
+        margin-top: 17px;
+        margin-left: 5px;
+        color: #92D5EA;
+
     }
   }
 `;
@@ -52,6 +56,10 @@ export const Container2 = styled.div`
       height: 20px;
       color: #969CB3;
       font-size: 12px;
+      display: block;
+      padding-top: 4px;
+      margin-top: 5px;
+
 
       span{
       margin-left: 10px;
@@ -77,6 +85,8 @@ export const Container2 = styled.div`
 
     h3{
         margin-top: 15px;
+        margin-left: 5px;
+        color: #92D5EA;
     }
   }
 `;

@@ -30,10 +30,17 @@ export const HeaderPost = styled.div`
     align-items: center;
   }
    img{
-     width: 71px;
-     height: 68px;
+  
      margin-top: 25px;
      margin-left: 25px;
+     
+    }
+    .img_perf{
+      
+     border-radius: 100px;
+      padding: 2px;
+      background: #FFF;
+      border: 2px solid #0E3F5D;
     }
     section{
       p{
@@ -48,6 +55,8 @@ export const HeaderPost = styled.div`
         span{
           font-size: 12px;
           margin-left: 16px;
+
+         
         }
         img{
           margin:auto;
@@ -84,20 +93,27 @@ export const ResultsPost = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 12px;
   
   p{
     margin-left: 35px;
     color: #969CB3;
     img{
-      height: 30px;
-      width: 30px;
-      margin-bottom: -7px;
+      height: 20px;
+      width: 20px;
+      margin-bottom: -4px;
+      margin-right: 4px;
+      
     }
   }
 
   span{
     margin-top: 26px;
     color: #969CB3;
+
+    &.spanc{
+     margin-right: 8px;
+   }
   }
 `;
 
@@ -113,6 +129,7 @@ export const ButtonPost = styled.div`
       border-style: none;
       margin-right: 10px;
       border-radius: 50px;
+      transition: background 0.5s;
 
 
       img{

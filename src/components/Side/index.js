@@ -4,11 +4,14 @@ import PerfilImg from '../../assets/perfil.svg'
 import GpsImg from '../../assets/gps.svg';
 import ApartImg from '../../assets/apart.svg';
 import CasaImg from '../../assets/casa.svg';
+import CapaImg from '../../assets/capa.svg';
 
 export function Side(){
     return(
         <Container>
-            <header></header>
+            <header>
+                <img src={CapaImg} alt="capa"/>
+            </header>
             <img src={PerfilImg} alt="Foto do Perfil" className="perfil_img"/>
             <Content>
                 <h1>André Caetano de Sousa</h1>

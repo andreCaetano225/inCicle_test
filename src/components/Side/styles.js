@@ -3,22 +3,31 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background: #FFFFFF;
   width: 305px;
-  height: 410px;
+  height: 420px;
   margin-top: 32px;
   margin-left: 35px;
   border-radius: 25px;
-
+  
+ 
   .perfil_img{
       width: 137px;
       height: 132px;
       border-radius: 66px;
       margin-top: -85px;
       margin-left: 80px;
+      padding: 3px;
+      background: #FFF;
+      border: 3px solid #0E3F5D;
   }
   header{
-     background: var(--capa);
      height: 190px;
      border-radius: 25px;
+
+     img{
+         width: 305px;
+         height: 190px;
+         border-radius: 25px;
+     }
   }
 `;
 
@@ -50,6 +59,7 @@ export const Content = styled.div`
         img{
             height: 30px;
             width: 30px;
+            
         }
 
     }

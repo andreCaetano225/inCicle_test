@@ -1,7 +1,7 @@
 import React, {  useState } from 'react';
 import {BiChevronDown} from 'react-icons/bi'
 import { Post,  HeaderPost, ResultsPost, ButtonPost } from './styles';
-import PefilImg from '../../assets/perfil.svg';
+import PefilAmigoImg from '../../assets/amigo.svg';
 import RelogioImg from '../../assets/relogio.svg';
 import Cadeado from '../../assets/cadeado.svg';
 import LikeImg from '../../assets/like.svg';
@@ -10,29 +10,49 @@ import CompartilhamentarImg from '../../assets/compartilhar.svg'
 import PlanetaImg from '../../assets/planeta.svg';
 
 export function Posts(){
-  const [isLike,setIsLike] = useState('seja o primeiro a curtir')
-  const [contLike,setContLike] = useState(1)
+  const [isLike,setIsLike] = useState('Seja o primeiro a curtir')
+  const [colorLike2,setColorLike2]= useState('#F2F3F5');
+  const [colorLike,setColorLike]= useState('#F2F3F5');
 
- 
+  const [statusLike,setStatusLike] = useState('Curtir');
+  const [statusLike2,setStatusLike2] = useState('Curtir');
+  const [contLike,setContLike] = useState('1');
+
+  // #00c2fe
 
   function Likebutton(){
-  ;
-
-    setIsLike(!isLike);
+   
+    if (isLike === 'Seja o primeiro a curtir'){
+      setIsLike('1 pessoa curtiu isso');
+      setStatusLike('Curtiu');
+      setColorLike('#00c2fe')
+    } else {
+      setIsLike('Seja o primeiro a curtir');
+      setStatusLike('Curtir');
+      setColorLike('#F2F3F5');
+    }
   }
 
   function AddLike(){
-    setContLike(contLike +1)
+    if (contLike === '1'){
+     setContLike('2');
+     setStatusLike2('Curtiu');
+     setColorLike2('#00c2fe');
+    }else{
+     setContLike('1');
+     setStatusLike2('Curtir');
+     setColorLike2('#F2F3F5');
+    }
   }
     return(
         <>
         <Post>
             <HeaderPost>
          <div>
-            <img src={PefilImg} alt="foto do perfil"/>
+            <img src={PefilAmigoImg} alt="foto do perfil" className="img_perf"/>
             <section>
             <p>
-             <h1> André Caetano de Sousa </h1>  <br/>     
+             <h1> Rayssa Leal </h1>  <br/>     
                <span> 
             <img src={RelogioImg} alt="Relogio"/>      
               há cerca de 4 horas 
@@ -50,19 +70,19 @@ export function Posts(){
             <ResultsPost>
                 <p>
               <img src={LikeImg} alt="like"/>
-              {isLike ? '1 pessoa curtiu isso' : 'seja o primeiro a curtir'}
+              {isLike}
               </p>
               <span>
-              0 comentários
+              <span className="spanc">0 comentários</span> 
               0 compartilhamentos
               </span>
             </ResultsPost>
             <ButtonPost>
-                <button type="button" onClick={Likebutton}
-                 
-                >
+                <button type="button" 
+                onClick={Likebutton}
+                style={{   background: colorLike   }} >
                     <img src={LikeImg} alt="likebutton"/>
-                    Curtir
+                   {statusLike}
                     </button>
                 <button type="button">
                 <img src={ComentarioImg} alt="likebutton"/>
@@ -78,10 +98,10 @@ export function Posts(){
         <Post>
             <HeaderPost>
          <div>
-            <img src={PefilImg} alt="foto do perfil"/>
+            <img src={PefilAmigoImg} alt="foto do perfil" className="img_perf"/>
             <section>
             <p>
-             <h1> André Caetano de Sousa </h1>  <br/>     
+             <h1> Rayssa Leal </h1>  <br/>     
                <span> 
             <img src={RelogioImg} alt="Relogio"/>      
               há 4 dias
@@ -95,22 +115,28 @@ export function Posts(){
                 </div>
                 <BiChevronDown size={30}/>
             </HeaderPost>
-            <p className="text">iiiiikikiki</p>
+            <p className="text">Ganhei a medalha de prata!!!!!!</p>
             <ResultsPost>
                 <p>
               <img src={LikeImg} alt="like"/>
               {contLike} pessoa curtiu isso
               </p>
               <span>
-              0 comentários
+             <span className="spanc">0 comentários</span> 
               3 compartilhamentos
               </span>
             </ResultsPost>
             <ButtonPost>
-                <button type="button"  onClick={AddLike}>
+                <button type="button"  
+                onClick={AddLike}
+                style={{background: colorLike2}}
+                
+                >
                     <img src={LikeImg} alt="likebutton"/>
-                    Curtir
+                    {statusLike2}
                     </button>
+
+
                 <button type="button">
                 <img src={ComentarioImg} alt="likebutton"/>
                     Comentários
